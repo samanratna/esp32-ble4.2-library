@@ -18,16 +18,6 @@
 #include "nvs_flash.h"
 #include "esp_task_wdt.h"
 
-#include "vcu.h"
-#include "esp_vcu.h"
-#include "vcu_esp.h"
-#include "esp_rec.h"
-#include "esp_vcu_communication.h"
 #include "ble.h"
-#include "OTA.h"
-#include "OBD.h"
-#include "can.h"
-#include "sim7600.h"
-#include "credentials.h"
 
 #endif

@@ -225,113 +225,9 @@ enum
     acknowledgement_characteristics_value,
     acknowledgement_characteristics_descriptor,
 
-    SoC_estRange_characteristics_index,
-    SoC_estRange_characteristics_value,
-    SoC_estRange_characteristics_descriptor,
-
-    eta_ChargingStatus_characteristics_index,
-    eta_ChargingStatus_characteristics_value,
-    eta_ChargingStatus_characteristics_descriptor,
-
-    trip_telemetry_characteristics_index,
-    trip_telemetry_characteristics_value,
-    trip_telemetry_characteristics_descriptor,
-
-    overall_data_characteristics_index,
-    overall_data_characteristics_value,
-    overall_data_characteristics_descriptor,
-
-    suste_data_characteristics_index,
-    suste_data_characteristics_value,
-    suste_data_characteristics_descriptor,
-
-    thikka_data_characteristics_index,
-    thikka_data_characteristics_value,
-    thikka_data_characteristics_descriptor,
-
-    babbal_data_characteristics_index,
-    babbal_data_characteristics_value,
-    babbal_data_characteristics_descriptor,
-
-    shake_mode_characteristics_index,
-    shake_mode_characteristics_value,
-    shake_mode_characteristics_descriptor,
-
-    anti_theft_characteristics_index,
-    anti_theft_characteristics_value,
-    anti_theft_characteristics_descriptor,
-
-    auto_timer_characteristics_index,
-    auto_timer_characteristics_value,
-    auto_timer_characteristics_descriptor,
-
-    time_format_characteristics_index,
-    time_format_characteristics_value,
-    time_format_characteristics_descriptor,
-
-    ui_mode_characteristics_index,
-    ui_mode_characteristics_value,
-    ui_mode_characteristics_descriptor,
-
-    brightness_level_characteristics_index,
-    brightness_level_characteristics_value,
-    brightness_level_characteristics_descriptor,
-
-    username_characteristics_index,
-    username_characteristics_value,
-    username_characteristics_descriptor,
-
-    bikename_characteristics_index,
-    bikename_characteristics_value,
-    bikename_characteristics_descriptor,
-
-    birthday_characteristics_index,
-    birthday_characteristics_value,
-    birthday_characteristics_descriptor,
-
-    lights_characteristics_index,
-    lights_characteristics_value,
-    lights_characteristics_descriptor,
-
-    lights_and_horn_characteristics_index,
-    lights_and_horn_characteristics_value,
-    lights_and_horn_characteristics_descriptor,
-
-    trip_reset_characteristics_index,
-    trip_reset_characteristics_value,
-    trip_reset_characteristics_descriptor,
-
-    bike_ON_OFF_characteristics_index,
-    bike_ON_OFF_characteristics_value,
-    bike_ON_OFF_characteristics_descriptor,
-
-    kill_switch_bypass_characteristics_index,
-    kill_switch_bypass_characteristics_value,
-    kill_switch_bypass_characteristics_descriptor,
-
-    mode_button_bypass_characteristics_index,
-    mode_button_bypass_characteristics_value,
-    mode_button_bypass_characteristics_descriptor,
-
     maintain_ble_connection_characteristics_index,
     maintain_ble_connection_characteristics_value,
     maintain_ble_connection_characteristics_descriptor,
-
-    rssi_value_characteristics_index,
-    rssi_value_characteristics_value,
-    rssi_value_characteristics_descriptor,
-
-    airlock_characteristics_index,
-    airlock_characteristics_value,
-    airlock_characteristics_descriptor,
-
-    ping_characteristics_index,
-    ping_characteristics_value,
-    ping_characteristics_descriptor,
-
-    ota_characteristics_index,
-    ota_characteristics_value,
-    ota_characteristics_descriptor,
 
     HRS_IDX_NB,
 };
@@ -346,28 +242,10 @@ enum
 void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
 void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
 
-// Load data from structure
-void Load_Bike_Power_Data(void);
-void Load_Bike_Settings_Data(void);
-void Load_Bike_Dash_Settings_Data(void);
-void Load_Bike_Dash_Indicator_Data(void);
-
-void Load_Overall_Data(void);
-void Load_Suste_Data(void);
-void Load_Thikka_Data(void);
-void Load_Babbal_Data(void);
-
-void Load_SoC_and_Range_Data(void);
-void Load_ETA_and_ChargingStatus_Data(void);
-void Load_Trip_Telemetry_Data(void);
-void BLE_Notify_Modified_Data(void);
-
 void ble_conn_timer_init(void);
-void ble_can_read(uint32_t id);
 
 // Function Prototypes
 void gatts_profile_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
 void BLE_notify_data(char *value, int characterictic_value);
-void First_Connect_Data_Transfer(uint16_t);
 
 #endif

@@ -1,28 +1,8 @@
 idf_component_register(
     SRCS            "main.c"
-                    "../sim/src/sim7600.c" 
                     "../ble/src/ble.c" 
-                    "../data_control/src/can.c"
-                    "../data_control/src/combiner.c"
-                    "../data_control/src/esp_rec.c"
-                    "../data_control/src/map.c"
-                    "../data_control/src/que.c"
-                    "../data_control/src/timer_esp.c"
-                    "../data_control/src/esp_vcu.c"
-                    "../data_control/src/vcu_esp.c"
-                    "../data_control/src/task_que.c"
-                    "../data_control/src/esp_vcu_communication.c"
-                    "../data_control/src/vcu.c"
-                    "../OTA/src/ota.c"
-                    "../OBD/src/obd.c"
-                    "../credentials/src/credentials.c"
 
-    INCLUDE_DIRS    "../sim/inc"
+    INCLUDE_DIRS    
                     "../ble/inc"
-                    "../data_control/inc"
-                    "../OTA/inc"
-                    "../OBD/inc"
-                    "../credentials/inc"
                     "."
-
 )
